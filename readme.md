@@ -1,6 +1,6 @@
 # ESP32 Ground Penetrating Radar (GPR) Visualization
 
-A Python-based visualization tool for real-time Ground Penetrating Radar data from an ESP32 microcontroller. This project provides both A-scan (single signal) and B-scan (depth profile) visualizations of GPR data.
+A Python-based visualization tool for real-time Ground Penetrating Radar data from an ESP32 microcontroller. It uses only onboard wifi signals and calculate the data loss and signal interruptions to generate the data. No external hardware or sensor is used. This project provides both A-scan (single signal) and B-scan (depth profile) visualizations of GPR data.
 
 ![GPR Visualization](Screenshot.png)
 
@@ -21,12 +21,12 @@ A Python-based visualization tool for real-time Ground Penetrating Radar data fr
 
 ### System Overview
 The GPR system consists of two main components:
-1. **Hardware Layer**: ESP32 microcontroller with GPR sensors (transmitter and receiver)
+1. **Hardware Layer**: ESP32 microcontroller with WiFi (transmitter and receiver)
 2. **Software Layer**: Python visualization program
 
 ### Data Flow
 1. **Data Collection**
-   - The ESP32 transmits electromagnetic pulses into the ground
+   - The ESP32 transmits WiFi packets into the ground
    - Reflected signals are captured by the receiver
    - Raw data is sent via serial communication in the format:
      ```
@@ -66,7 +66,7 @@ The GPR system consists of two main components:
 ## Prerequisites
 
 - Python 3.6 or higher
-- ESP32 hardware setup with GPR sensors
+- ESP32
 - USB connection to ESP32
 
 ## Installation
@@ -84,7 +84,7 @@ pip install -r requirements.txt
 
 ## Usage
 
-1. Connect your ESP32 GPR hardware to your computer via USB.
+1. Connect receiver ESP32 to your computer via USB.
 
 2. Run the visualization program:
 ```bash
