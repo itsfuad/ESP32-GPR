@@ -1,0 +1,4 @@
+# requirements.txt for ESP32 GPR Visualization
+pyserial>=3.5
+numpy>=1.22.0
+matplotlib>=3.5.0
